@@ -7,9 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class Pages {
     
     @GetMapping("/home")
-    public String home() {
+    public String getHome() {
         return "home";
     }
 
+    @GetMapping("/register")
+    public String getRegister() {
+        return "register";
+    }
 
 }
