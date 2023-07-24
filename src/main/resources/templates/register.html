@@ -63,14 +63,14 @@
           </div>
           <div class="col-md-2">
             <label th:for="jornada" class="form-label">Jornada</label>
-            <input type="number" th:field="*{jornada}" class="form-control" id="inputJornada" value="40">
+            <input type="number" th:field="*{jornada}" class="form-control" id="inputJornada" required="required">
           </div>
           <div class="col-md-3">
-            <label th:for="horarioEntrada" class="form-label">Horário de Entrada</label>
+            <label th:for="horarioEntrada" class="form-label">Entrada</label>
             <input type="time" th:field="*{horarioEntrada}" class="form-control" id="inputEntrada" required="required">
           </div>
           <div class="col-md-3">
-            <label th:for="horarioSaida" class="form-label">Horário de Saída</label>
+            <label th:for="horarioSaida" class="form-label">Saída</label>
             <input type="time" th:field="*{horarioSaida}" class="form-control" id="inputSaida" required="required">
           </div>
           <div class="col-12">
