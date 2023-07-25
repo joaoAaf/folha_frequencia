@@ -2,6 +2,8 @@ package com.local.gerador_frequencia.model.entities;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Data {
 
     private String nome;
@@ -10,16 +12,19 @@ public class Data {
     private String funcao;
     private String lotacao;
     private String setor;
+    @DateTimeFormat(pattern = "yyyy-MM")
     private Date mes;
     private Integer jornada;
+    @DateTimeFormat(pattern = "HH:mm")
     private Date horarioEntrada;
+    @DateTimeFormat(pattern = "HH:mm")
     private Date horarioSaida;
     private Boolean repetir;
     private Boolean aleatorio;
-
-    public Data () {
-    }
     
+    public Data() {
+    }
+
     public String getNome() {
         return nome;
     }
@@ -92,14 +97,6 @@ public class Data {
     public void setAleatorio(Boolean aleatorio) {
         this.aleatorio = aleatorio;
     }
-
-    @Override
-    public String toString() {
-        return "Dados [nome=" + nome + ", matricula=" + matricula + ", cargo=" + cargo + ", funcao=" + funcao
-                + ", lotacao=" + lotacao + ", setor=" + setor + ", mes=" + mes + ", jornada=" + jornada
-                + ", horarioEntrada=" + horarioEntrada + ", horarioSaida=" + horarioSaida + ", repetir=" + repetir
-                + ", aleatorio=" + aleatorio + "]";
-    }
-
+    
 }
 
