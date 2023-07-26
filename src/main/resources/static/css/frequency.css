@@ -21,9 +21,20 @@ main {
     position: relative;
 }
 
+/*Esconde scrollbar no chrome, safari e opera*/
+#frequency::-webkit-scrollbar {
+    display: none;
+}
+
+/*Esconde scrollbar no edge, ie e firefox*/
+#frequency {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 @media only screen and (max-width: 440px) {
-    #frequency{
-      width: 100%;
-      height: 100vh;
+    #frequency {
+        width: 100%;
+        height: 100vh;
     }
-  }
+}
