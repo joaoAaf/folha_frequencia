@@ -1,0 +1,29 @@
+body {
+    background-image: radial-gradient(ellipse at center, #19882c 10%, #025310 90%);
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+#frequency {
+    background-color: white;
+    height: 100vh;
+    max-height: 650px;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: scroll;
+    position: relative;
+}
+
+@media only screen and (max-width: 440px) {
+    #frequency{
+      width: 100%;
+      height: 100vh;
+    }
+  }

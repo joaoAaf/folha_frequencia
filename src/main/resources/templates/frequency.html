@@ -1,27 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="h-100" data-bs-theme="auto">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="icon" href="https://apps.limoeiro.ifce.edu.br/reservas/favicon.ico" sizes="32x32" type="image/png">
+  <link rel="icon" href="https://apps.limoeiro.ifce.edu.br/reservas/favicon.ico" sizes="16x16" type="image/png">
+  <link rel="icon" href="https://apps.limoeiro.ifce.edu.br/reservas/favicon.ico">
+  <meta name="theme-color" content="#712cf9">
+  <link rel="stylesheet" href="https://getbootstrap.com/docs/5.3/examples/cover/cover.css">
+  <link rel="stylesheet" href="css/frequency.css">
 </head>
 
-<body>
-    <h1>Dados do Servidor:</h1>
+<body class="d-flex h-100 text-center text-bg-dark">
 
-    <p>Nome: <b th:text="${data.nome}" /></p>
-    <p>Matricula: <b th:text="${{data.matricula}}" /></p>
-    <p>Cargo: <b th:text="${data.cargo}" /></p>
-    <p>Função: <b th:text="${data.funcao}" /></p>
-    <p>Lotação: <b th:text="${data.lotacao}" /></p>
-    <p>Setor: <b th:text="${data.setor}" /></p>
-    <p>Mês de Referencia: <b th:text="${#dates.format(data.mes,'MM/yyyy')}" /></p>
-    <p>Jornada: <b th:text="${data.jornada}" /></p>
-    <p>Entrada: <b th:text="${#dates.format(data.horarioEntrada, 'HH:mm')}" /></p>
-    <p>Saída: <b th:text="${#dates.format(data.horarioSaida, 'HH:mm')}" /></p>
-    <p>Repetir: <b th:text="${data.repetir}" /></p>
-    <p>Aleatório: <b th:text="${data.aleatorio}" /></p>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="home">Inicio</a>
+          <a class="nav-link fw-bold py-1 px-0 active" href="register">Frequência</a>
+          <a class="nav-link fw-bold py-1 px-0" href="#">Calendário</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="px-3">
+      <div id="frequency"></div>
+    </main>
+
+    <footer class="mt-auto text-white-50">
+      <p>Criado por <a href="https://github.com/joaoAaf/gerador_frequencia" class="text-white">João Anderson</a></p>
+    </footer>
+  </div>
+  <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
