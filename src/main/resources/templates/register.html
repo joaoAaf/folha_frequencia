@@ -39,7 +39,7 @@
           </div>
           <div class="col-md-6">
             <label th:for="matricula" class="form-label">Matrícula</label>
-            <input type="text" th:field="*{matricula}" class="form-control" id="inputMatricula" required="required">
+            <input type="number" th:field="*{matricula}" class="form-control" id="inputMatricula" required="required">
           </div>
           <div class="col-md-6">
             <label th:for="cargo" class="form-label">Cargo</label>
@@ -51,7 +51,8 @@
           </div>
           <div class="col-md-6">
             <label th:for="lotacao" class="form-label">Lotação</label>
-            <input type="text" th:field="*{lotacao}" class="form-control" id="inputLotacao" placeholder="Campus ..." required="required">
+            <input type="text" th:field="*{lotacao}" class="form-control" id="inputLotacao" placeholder="Campus ..."
+              required="required">
           </div>
           <div class="col-md-6">
             <label th:for="setor" class="form-label">Setor</label>
@@ -59,7 +60,8 @@
           </div>
           <div class="col-md-4">
             <label th:for="mes" class="form-label">Mês de Referência</label>
-            <input type="month" th:field="*{mes}" class="form-control" id="inputMes" required="required">
+            <input type="month" th:field="*{mes}" class="form-control" id="inputMes" pattern="[0-9]{4}-[0-9]{2}"
+              placeholder="aaaa-mm" required="required">
           </div>
           <div class="col-md-2">
             <label th:for="jornada" class="form-label">Jornada</label>
