@@ -11,6 +11,11 @@ import com.local.gerador_frequencia.model.entities.Data;
 @Controller
 public class Pages {
     
+    @GetMapping("/")
+    public String getHome0() {
+        return "home";
+    }
+    
     @GetMapping("/home")
     public String getHome() {
         return "home";

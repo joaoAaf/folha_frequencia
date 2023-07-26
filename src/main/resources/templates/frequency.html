@@ -16,11 +16,11 @@
     <p>Função: <b th:text="${data.funcao}" /></p>
     <p>Lotação: <b th:text="${data.lotacao}" /></p>
     <p>Setor: <b th:text="${data.setor}" /></p>
-    <p>Mês de Referencia: <b th:text="${data.mes}" /></p>
+    <p>Mês de Referencia: <b th:text="${#dates.format(data.mes,'MM/yyyy')}" /></p>
     <p>Jornada: <b th:text="${data.jornada}" /></p>
-    <p>Entrada: <b th:text="${data.horarioEntrada}" /></p>
-    <p>Saída: <b th:text="${data.horarioSaida}" /></p>
-    <p>Repetir: <b th:text="${data.repetir" /></p>
+    <p>Entrada: <b th:text="${#dates.format(data.horarioEntrada, 'HH:mm')}" /></p>
+    <p>Saída: <b th:text="${#dates.format(data.horarioSaida, 'HH:mm')}" /></p>
+    <p>Repetir: <b th:text="${data.repetir}" /></p>
     <p>Aleatório: <b th:text="${data.aleatorio}" /></p>
 </body>
 
