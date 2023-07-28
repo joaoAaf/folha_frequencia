@@ -31,7 +31,7 @@
     <main class="px-3">
       <div>
         <h2 class="text-center">Dados do Servidor</h2>
-        <form class="row g-3" th:action="@{/frequency}" th:object="${data}" method="post">
+        <form id="register" class="row g-3" th:action="@{/frequency}" th:object="${data}" method="post">
           <div class="col-md-6">
             <label th:for="nome" class="form-label">Nome</label>
             <input type="text" th:field="*{nome}" class="form-control" id="inputNome" required="required">
@@ -57,21 +57,46 @@
             <label th:for="setor" class="form-label">Setor</label>
             <input type="text" th:field="*{setor}" class="form-control" id="inputLotacao" required="required">
           </div>
-          <div class="col-md-4">
-            <label th:for="mes" class="form-label">Mês de Referência</label>
-            <input type="month" th:field="*{mes}" class="form-control" id="inputMes" pattern="[0-9]{4}-[0-9]{2}"
-              placeholder="aaaa-mm" required="required">
-          </div>
-          <div class="col-md-2">
-            <label th:for="jornada" class="form-label">Jornada</label>
-            <input type="number" th:field="*{jornada}" class="form-control" id="inputJornada" required="required">
+          <div class="col-md-6">
+            <label th:for="mes" class="form-label">Mês</label>
+            <select form="register" th:field="*{nome}" class="form-control" id="inputMes">
+              <option th:value="0">Selecione o Mês de Referência</option>
+              <option th:value="1">Janeiro</option>
+              <option th:value="2">Fevereiro</option>
+              <option th:value="3">Março</option>
+              <option th:value="4">Abril</option>
+              <option th:value="5">Maio</option>
+              <option th:value="6">Junho</option>
+              <option th:value="7">Julho</option>
+              <option th:value="8">Agosto</option>
+              <option th:value="9">Setembro</option>
+              <option th:value="10">Outubro</option>
+              <option th:value="11">Novembro</option>
+              <option th:value="12">Dezembro</option>
+            </select>
           </div>
           <div class="col-md-3">
-            <label th:for="horarioEntrada" class="form-label">Entrada</label>
+            <label th:for="ano" class="form-label">Ano</label>
+            <input type="number" th:field="*{mes}" class="form-control" id="inputAno" placeholder="20XX" required="required">
+          </div>
+          <div class="col-md-3">
+            <label th:for="jornada" class="form-label">Jornada</label>
+            <input type="number" th:field="*{jornada}" class="form-control" id="inputJornada" placeholder="Horas" required="required">
+          </div>
+          <div class="col-md-3">
+            <label th:for="horarioEntrada" class="form-label">Entrada 1</label>
             <input type="time" th:field="*{horarioEntrada}" class="form-control" id="inputEntrada" required="required">
           </div>
           <div class="col-md-3">
-            <label th:for="horarioSaida" class="form-label">Saída</label>
+            <label th:for="horarioSaida" class="form-label">Saída 1</label>
+            <input type="time" th:field="*{horarioSaida}" class="form-control" id="inputSaida" required="required">
+          </div>
+          <div class="col-md-3">
+            <label th:for="horarioEntrada" class="form-label">Entrada 2</label>
+            <input type="time" th:field="*{horarioEntrada}" class="form-control" id="inputEntrada" required="required">
+          </div>
+          <div class="col-md-3">
+            <label th:for="horarioSaida" class="form-label">Saída 2</label>
             <input type="time" th:field="*{horarioSaida}" class="form-control" id="inputSaida" required="required">
           </div>
           <div class="col-12">
