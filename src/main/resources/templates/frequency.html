@@ -99,8 +99,7 @@
           </thead>
           <tbody id="tboby_frequency" style="text-align:center">
             <script th:inline="javascript">
-              const mes = /*[[${#dates.month(data.mes)}]]*/[];
-              const ano = /*[[${#dates.year(data.mes)}]]*/[];
+              const mes = /*[[${data.mes}]]*/[];
             </script>
           </tbody>
         </table>

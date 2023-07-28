@@ -1,6 +1,6 @@
 const tbody = document.getElementById('tboby_frequency')
 
-const date = new Date(ano,mes,1)
+const date = new Date(mes)
 
 
 
@@ -15,7 +15,7 @@ const date = new Date(ano,mes,1)
 const tr = document.createElement('tr')
 
 const td = document.createElement('td')
-td.innerHTML = date.getMonth()
+td.innerHTML = date
 
 tr.appendChild(td)
 tbody.appendChild(tr)
