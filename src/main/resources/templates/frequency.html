@@ -31,9 +31,9 @@
     <main class="px-3">
       <div id="frequency">
         <table border="1"
-          style="margin-left:auto;margin-right:auto;width:700px;font-family:Arial, Helvetica, sans-serif;border:2px solid black;font-size:0.9em;line-height:1.2em;border-collapse:collapse;margin-bottom:1em;white-space:nowrap">
+          style="margin-left:auto;margin-right:auto;width:700px;font-family:Arial, Helvetica, sans-serif;border:2px solid black;font-size:0.9em;line-height:1.2em;border-collapse:collapse;margin-bottom:1em;white-space:nowrap; color:black">
           <tbody style="text-align:left">
-            <tr style="background-color:rgb(221, 221, 221);text-align:center">
+            <tr style="background-color:darkgray;text-align:center">
               <td colspan="4" style="padding:0.2em"><strong>DADOS BÁSICOS</strong></td>
             </tr>
             <tr>
@@ -76,29 +76,32 @@
               </td>
               <td style="border:none">
                 <span th:text="${#dates.format(data.horarioEntrada, 'HH:mm')}"></span>
-                 às 
+                às
                 <span th:text="${#dates.format(data.horarioSaida, 'HH:mm')}"></span>
               </td>
             </tr>
           </tbody>
         </table>
         <table border="1"
-          style="margin-left:auto;margin-right:auto;width:700px;font-family:Arial, Helvetica, sans-serif;border:2px solid black;border-collapse:collapse">
+          style="margin-left:auto;margin-right:auto;width:700px;font-family:Arial, Helvetica, sans-serif;border:2px solid black;border-collapse:collapse; color:black">
           <thead>
-            <tr style="background-color:rgb(221, 221, 221);text-align:center;font-weight:bold">
+            <tr style="background-color:darkgray;text-align:center;font-weight:bold">
               <td colspan="2" style="padding:0.2em">1º TURNO</td>
               <td rowspan="2" style="padding:0.2em">DIA</td>
               <td colspan="2" style="padding:0.2em">2º TURNO</td>
             </tr>
-            <tr style="background-color:rgb(231, 231, 231);text-align:center;font-weight:bold">
+            <tr style="background-color:rgb(220, 220, 220);text-align:center;font-weight:bold">
               <td style="padding:0.2em">ENTRADA</td>
               <td style="padding:0.2em">SAÍDA</td>
               <td style="padding:0.2em">ENTRADA</td>
               <td style="padding:0.2em">SAÍDA</td>
             </tr>
           </thead>
-          <tbody style="text-align:center">
-            
+          <tbody id="tboby_frequency" style="text-align:center">
+            <script th:inline="javascript">
+              const mes = /*[[${#dates.month(data.mes)}]]*/[];
+              const ano = /*[[${#dates.year(data.mes)}]]*/[];
+            </script>
           </tbody>
         </table>
       </div>
@@ -109,6 +112,7 @@
     </footer>
   </div>
   <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/frequency.js"></script>
 
 </body>
 
