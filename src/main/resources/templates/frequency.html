@@ -75,9 +75,9 @@
                 <strong>HORÁRIO:</strong>
               </td>
               <td style="border:none">
-                <span th:text="${#dates.format(data.horarioEntrada, 'HH:mm')}"></span>
+                <span th:text="${data.getHorario(0)}"></span>
                 às
-                <span th:text="${#dates.format(data.horarioSaida, 'HH:mm')}"></span>
+                <span th:text="${data.getHorario(3)}"></span>
               </td>
             </tr>
           </tbody>

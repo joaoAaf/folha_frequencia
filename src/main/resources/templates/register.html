@@ -59,7 +59,7 @@
           </div>
           <div class="col-md-6">
             <label th:for="mes" class="form-label">Mês</label>
-            <select form="register" th:field="*{nome}" class="form-control" id="inputMes">
+            <select form="register" th:field="*{mes}" class="form-control" id="inputMes">
               <option th:value="0">Selecione o Mês de Referência</option>
               <option th:value="1">Janeiro</option>
               <option th:value="2">Fevereiro</option>
@@ -77,27 +77,28 @@
           </div>
           <div class="col-md-3">
             <label th:for="ano" class="form-label">Ano</label>
-            <input type="number" th:field="*{mes}" class="form-control" id="inputAno" placeholder="20XX" required="required">
+            <input type="number" th:field="*{ano}" class="form-control" id="inputAno" required="required">
           </div>
           <div class="col-md-3">
             <label th:for="jornada" class="form-label">Jornada</label>
-            <input type="number" th:field="*{jornada}" class="form-control" id="inputJornada" placeholder="Horas" required="required">
+            <input type="number" th:field="*{jornada}" class="form-control" id="inputJornada" placeholder="Horas"
+              required="required">
           </div>
           <div class="col-md-3">
-            <label th:for="horarioEntrada" class="form-label">Entrada 1</label>
-            <input type="time" th:field="*{horarioEntrada}" class="form-control" id="inputEntrada" required="required">
+            <label th:for="horario1" class="form-label">Entrada 1</label>
+            <input type="time" th:field="*{horarios}" class="form-control" id="inputEntrada1" required="required">
           </div>
           <div class="col-md-3">
-            <label th:for="horarioSaida" class="form-label">Saída 1</label>
-            <input type="time" th:field="*{horarioSaida}" class="form-control" id="inputSaida" required="required">
+            <label th:for="saida1" class="form-label">Saída 1</label>
+            <input type="time" th:field="*{horarios}" class="form-control" id="inputSaida1" required="required">
           </div>
           <div class="col-md-3">
-            <label th:for="horarioEntrada" class="form-label">Entrada 2</label>
-            <input type="time" th:field="*{horarioEntrada}" class="form-control" id="inputEntrada" required="required">
+            <label th:for="entrada2" class="form-label">Entrada 2</label>
+            <input type="time" th:field="*{horarios}" class="form-control" id="inputEntrada2" required="required">
           </div>
           <div class="col-md-3">
-            <label th:for="horarioSaida" class="form-label">Saída 2</label>
-            <input type="time" th:field="*{horarioSaida}" class="form-control" id="inputSaida" required="required">
+            <label th:for="saida2" class="form-label">Saída 2</label>
+            <input type="time" th:field="*{horarios}" class="form-control" id="inputSaida2" required="required">
           </div>
           <div class="col-12">
             <div class="form-check">
@@ -127,6 +128,7 @@
     </footer>
   </div>
   <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/currentYear.js"></script>
 
 </body>
 

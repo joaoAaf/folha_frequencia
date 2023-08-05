@@ -29,6 +29,7 @@ public class Pages {
 
     @PostMapping("/frequency")
     public String getFrequency (@ModelAttribute Data data) {
+        //data.setDia();
         return "frequency";
     }
 

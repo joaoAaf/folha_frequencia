@@ -16,7 +16,7 @@ public class Data {
     private String mes;
     private String ano;
     private Integer jornada;
-    private List<String> horarios = new ArrayList<>();
+    private String horarios;
     private Boolean repetir;
     private Boolean aleatorio;
     private List<LocalDateTime> dia = new ArrayList<>();
@@ -72,8 +72,16 @@ public class Data {
         this.setor = setor;
     }
 
+    public String getMes() {
+        return mes;
+    }
+
     public void setMes(String mes) {
         this.mes = mes;
+    }
+
+    public String getAno() {
+        return ano;
     }
 
     public void setAno(String ano) {
@@ -88,8 +96,17 @@ public class Data {
         this.jornada = jornada;
     }
 
-    public void setHorarios(String horario) {
-        this.horarios.add(horario);
+    public String getHorarios() {
+        return horarios;
+    }
+
+    public String getHorario(int i) {
+        String[] horarios = this.horarios.split(",");
+        return horarios[i];
+    }
+    
+    public void setHorarios(String horarios) {
+        this.horarios = horarios;
     }
 
     public Boolean getRepetir() {
@@ -113,8 +130,8 @@ public class Data {
     }
 
     public void setDia() {
-        for (int i = 0; i < this.horarios.size(); i++) {
-            String dia = this.mes+this.ano+this.horarios.get(i);
+        for (int i = 0; i < 4; i++) {
+            String dia = this.mes+this.ano+getHorario(i);
             this.dia.add(LocalDateTime.parse(dia,DateTimeFormatter.ofPattern("MMyyyyHH:mm")));
         }
     }

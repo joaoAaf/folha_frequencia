@@ -1,4 +1,4 @@
-const tbody = document.getElementById('tboby_frequency')
+/*const tbody = document.getElementById('tboby_frequency')
 
 const date = new Date(mes)
 
@@ -18,7 +18,7 @@ const td = document.createElement('td')
 td.innerHTML = date
 
 tr.appendChild(td)
-tbody.appendChild(tr)
+tbody.appendChild(tr)*/
 
 
 
