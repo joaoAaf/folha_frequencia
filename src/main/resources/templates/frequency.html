@@ -75,9 +75,9 @@
                 <strong>HORÁRIO:</strong>
               </td>
               <td style="border:none">
-                <span th:text="${data.getHorario(0)}"></span>
+                <span th:text="${#temporals.format(data.dia[0], 'HH:mm')}"></span>
                 às
-                <span th:text="${data.getHorario(3)}"></span>
+                <span th:text="${#temporals.format(data.dia[3], 'HH:mm')}"></span>
               </td>
             </tr>
           </tbody>
@@ -99,7 +99,7 @@
           </thead>
           <tbody id="tboby_frequency" style="text-align:center">
             <script th:inline="javascript">
-              const mes = /*[[${data.mes}]]*/[];
+              const mes = /*[[${data.dia}]]*/[];
             </script>
           </tbody>
         </table>

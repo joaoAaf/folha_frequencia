@@ -31,7 +31,7 @@
     <main class="px-3">
       <div>
         <h2 class="text-center">Dados do Servidor</h2>
-        <form id="register" class="row g-3" th:action="@{/frequency}" th:object="${data}" method="post">
+        <form id="register" class="row g-3" th:action="@{/frequency}" th:object="${dataDto}" method="post">
           <div class="col-md-6">
             <label th:for="nome" class="form-label">Nome</label>
             <input type="text" th:field="*{nome}" class="form-control" id="inputNome" required="required">
