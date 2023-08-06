@@ -14,10 +14,10 @@ public class DataService {
     public Data DTOForData(DataDTO dataDto) {
         String[] horarios = dataDto.getHorarios().split(",");
         LocalDateTime[] dia = new LocalDateTime[4];
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyyHH:mmss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-M-yyyyHH:mmss");
         
         for (int i = 0; i < 4; i++) {
-            String diaString = "01" + dataDto.getMes() + dataDto.getAno() + horarios[i] + "00";
+            String diaString = "01" + "-" + dataDto.getMes() + "-" + dataDto.getAno() + horarios[i] + "00";
             dia[i] = LocalDateTime.parse(diaString,formatter);
         }
         Data data = new Data(dataDto.getNome(), dataDto.getMatricula(), dataDto.getCargo(), dataDto.getFuncao(),
