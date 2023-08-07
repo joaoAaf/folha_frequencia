@@ -10,10 +10,13 @@ function criaDia(dia) {
             switch (num) {
                 case 0:
                     td.innerHTML = "DOMINGO"
+                    break
                 case 6:
                     td.innerHTML = "SABADO"
+                    break
                 default:
                     td.innerHTML = opcaoHorario(dia[j])
+                    break
             }
         }
         tr.appendChild(td)
