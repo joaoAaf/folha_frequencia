@@ -26,11 +26,13 @@ function criaDia(dia) {
 
 function opcaoHorario(hora) {
     if (repetir == true || (aleatorio == true && repetir == true)) {
-       return hora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
+        return hora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
     }
     else if (aleatorio == true) {
-        //escrever codigo para aleatorio
-        return ""
+        const horaAleatoria = new Date(hora)
+        let num = Math.floor(Math.random() * 19) - 9
+        horaAleatoria.setMinutes(hora.getMinutes() + num)
+        return horaAleatoria.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
     }
     else {
         return ""
