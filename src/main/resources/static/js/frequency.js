@@ -3,16 +3,21 @@ function criaDia(dia) {
     let num = dia[2].getDay()
     for (j = 0; j < dia.length; j++) {
         let td = document.createElement('td')
+        td.className = "td_horarios"
         if (j == 2) {
             td.innerHTML = dia[2].getDate()
         }
         else {
             switch (num) {
                 case 0:
-                    td.innerHTML = "DOMINGO"
+                    let strong1 = document.createElement('strong')
+                    strong1.innerHTML = "DOMINGO"
+                    td.appendChild(strong1)
                     break
                 case 6:
-                    td.innerHTML = "SABADO"
+                    let strong2 = document.createElement('strong')
+                    strong2.innerHTML = "SABADO"
+                    td.appendChild(strong2)
                     break
                 default:
                     td.innerHTML = opcaoHorario(dia[j])

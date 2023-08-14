@@ -17,6 +17,10 @@ main {
     place-items: center;
 }
 
+.td_horarios{
+    border: 0.5px solid black;
+}
+
 #frequency {
     padding: 20px;
     background-color: white;
