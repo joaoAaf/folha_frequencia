@@ -22,6 +22,7 @@ main {
 }
 
 #frequency {
+    color: black;
     padding: 20px;
     background-color: white;
     height: 100%;
