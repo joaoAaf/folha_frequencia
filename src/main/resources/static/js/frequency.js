@@ -62,7 +62,13 @@ for (i = 1; i <= ultimoDia.getDate(); i++) {
     horasDia[2].setDate(horasDia[2].getDate() + 1)
 }
 
-
+let tr = document.createElement('tr')
+for (i = 0; i < 5; i++) {
+    let td = document.createElement('td')
+    td.style = "background-color:darkgray; height: 25px"
+    tr.appendChild(td)
+}
+tbody.appendChild(tr)
 
 
 

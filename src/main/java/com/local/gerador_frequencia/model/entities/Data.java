@@ -10,19 +10,23 @@ public class Data {
     private String funcao;
     private String lotacao;
     private String setor;
+    private String chefia;
+    private String cargoChefia;
     private Integer jornada;
     private Boolean repetir;
     private Boolean aleatorio;
     private LocalDateTime[] dia;
-    
-    public Data(String nome, String matricula, String cargo, String funcao, String lotacao, String setor,
-            Integer jornada, Boolean repetir, Boolean aleatorio, LocalDateTime[] dia) {
+
+    public Data(String nome, String matricula, String cargo, String funcao, String lotacao, String setor, String chefia,
+            String cargoChefia, Integer jornada, Boolean repetir, Boolean aleatorio, LocalDateTime[] dia) {
         this.nome = nome;
         this.matricula = matricula;
         this.cargo = cargo;
         this.funcao = funcao;
         this.lotacao = lotacao;
         this.setor = setor;
+        this.chefia = chefia;
+        this.cargoChefia = cargoChefia;
         this.jornada = jornada;
         this.repetir = repetir;
         this.aleatorio = aleatorio;
@@ -67,6 +71,14 @@ public class Data {
 
     public LocalDateTime[] getDia() {
         return dia;
+    }
+
+    public String getChefia() {
+        return chefia;
+    }
+
+    public String getCargoChefia() {
+        return cargoChefia;
     }
 
 }

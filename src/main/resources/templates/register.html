@@ -58,6 +58,14 @@
             <input type="text" th:field="*{setor}" class="form-control" id="inputLotacao" required="required">
           </div>
           <div class="col-md-6">
+            <label th:for="chefia" class="form-label">Chefia Imediata</label>
+            <input type="text" th:field="*{chefia}" class="form-control" id="inputChefia" required="required">
+          </div>
+          <div class="col-md-6">
+            <label th:for="cargoChefia" class="form-label">Cargo/ Função da Chefia</label>
+            <input type="text" th:field="*{cargoChefia}" class="form-control" id="inputcargoChefia" required="required">
+          </div>
+          <div class="col-md-6">
             <label th:for="mes" class="form-label">Mês</label>
             <select form="register" th:field="*{mes}" class="form-control" id="inputMes">
               <option th:value="0">Selecione o Mês de Referência</option>

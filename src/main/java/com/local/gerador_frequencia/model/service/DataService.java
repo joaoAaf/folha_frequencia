@@ -15,13 +15,14 @@ public class DataService {
         String[] horarios = dataDto.getHorarios().split(",");
         LocalDateTime[] dia = new LocalDateTime[4];
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-M-yyyyHH:mmss");
-        
+
         for (int i = 0; i < 4; i++) {
             String diaString = "01" + "-" + dataDto.getMes() + "-" + dataDto.getAno() + horarios[i] + "00";
-            dia[i] = LocalDateTime.parse(diaString,formatter);
+            dia[i] = LocalDateTime.parse(diaString, formatter);
         }
         Data data = new Data(dataDto.getNome(), dataDto.getMatricula(), dataDto.getCargo(), dataDto.getFuncao(),
-                dataDto.getLotacao(), dataDto.getSetor(), dataDto.getJornada(), dataDto.getRepetir(), dataDto.getAleatorio(), dia);
+                dataDto.getLotacao(), dataDto.getSetor(), dataDto.getChefia(), dataDto.getCargoChefia(),
+                dataDto.getJornada(), dataDto.getRepetir(), dataDto.getAleatorio(), dia);
         return data;
     }
 

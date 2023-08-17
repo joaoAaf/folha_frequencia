@@ -8,6 +8,8 @@ public class DataDTO {
     private String funcao;
     private String lotacao;
     private String setor;
+    private String chefia;
+    private String cargoChefia;
     private String mes;
     private String ano;
     private Integer jornada;
@@ -112,6 +114,22 @@ public class DataDTO {
 
     public void setAleatorio(Boolean aleatorio) {
         this.aleatorio = aleatorio;
+    }
+
+    public String getChefia() {
+        return chefia;
+    }
+
+    public void setChefia(String chefia) {
+        this.chefia = chefia;
+    }
+
+    public String getCargoChefia() {
+        return cargoChefia;
+    }
+
+    public void setCargoChefia(String cargoChefia) {
+        this.cargoChefia = cargoChefia;
     }
     
 }
