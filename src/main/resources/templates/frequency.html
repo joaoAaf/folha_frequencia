@@ -30,7 +30,7 @@
 
     <main class="px-3">
       <div id="frequency_html" class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-secondary" type="button">Copiar HTML</button>
+        <button onclick="geraHtml()" class="btn btn-secondary" type="button">Copiar HTML</button>
       </div>
       <div id="frequency">
         <table id="table_frequency1" border="1"
@@ -109,16 +109,18 @@
           </tbody>
         </table>
         <br>
-        <p>
-          <span th:text="${data.nome.toUpperCase()}"></span>
-          <br>
-          <span th:text="${data.cargo}"></span>
-        </p>
-        <p>
-          <span th:text="${data.chefia.toUpperCase()}"></span>
-          <br>
-          <span th:text="${data.cargoChefia}"></span>
-        </p>
+        <div style="text-align:center">
+          <p>
+            <span th:text="${data.nome.toUpperCase()}"></span>
+            <br>
+            <span th:text="${data.cargo}"></span>
+          </p>
+          <p>
+            <span th:text="${data.chefia.toUpperCase()}"></span>
+            <br>
+            <span th:text="${data.cargoChefia}"></span>
+          </p>
+        </div>
       </div>
     </main>
 
