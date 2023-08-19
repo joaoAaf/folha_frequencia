@@ -2,14 +2,10 @@
 <html lang="pt-BR" class="h-100" data-bs-theme="auto">
 
 <head>
-  <script src="assets/js/color-modes.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#712cf9">
-  <link rel="icon" href="assets/favicons/ifce.ico" sizes="32x32" type="image/png">
-  <link rel="icon" href="assets/favicons/ifce.ico" sizes="16x16" type="image/png">
-  <link rel="icon" href="assets/favicons/ifce.ico">
   <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/pages.css">
   <link rel="stylesheet" href="css/frequency.css">
@@ -32,6 +28,18 @@
       <div id="frequency_html" class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button onclick="geraHtml()" class="btn btn-secondary" type="button">Copiar HTML</button>
       </div>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast text-bg-secondary align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+            <div class="toast-body">
+              O HTML foi copiado com sucesso!
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+
       <div id="frequency">
         <table id="table_frequency1" border="1"
           style="margin-left:auto;margin-right:auto;width:700px;font-family:Arial, Helvetica, sans-serif;border:2px solid black;font-size:0.9em;line-height:1.2em;border-collapse:collapse;margin-bottom:1em;white-space:nowrap; color:black">
