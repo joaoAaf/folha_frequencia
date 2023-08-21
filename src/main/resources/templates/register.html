@@ -106,7 +106,8 @@
           </div>
           <div class="col-12">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" th:field="*{repetir}" id="checkRepetir">
+              <input onclick="desativar(repetir, aleatorio)" class="form-check-input" type="checkbox"
+                th:field="*{repetir}" id="checkRepetir">
               <label class="form-check-label" th:for="repetir">
                 Repetir entrada e saída em todos os dias
               </label>
@@ -114,7 +115,8 @@
           </div>
           <div class="col-12">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" th:field="*{aleatorio}" id="checkAleatorio">
+              <input onclick="desativar(aleatorio, repetir)" class="form-check-input" type="checkbox"
+                th:field="*{aleatorio}" id="checkAleatorio">
               <label class="form-check-label" th:for="aleatorio">
                 Criar horários aleatórios
               </label>
@@ -133,6 +135,7 @@
   </div>
   <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/currentYear.js"></script>
+  <script src="js/disableCheck.js"></script>
 
 </body>
 
