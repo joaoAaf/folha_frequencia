@@ -63,8 +63,8 @@
           </div>
           <div class="col-md-6">
             <label th:for="mes" class="form-label">Mês</label>
-            <select form="register" th:field="*{mes}" class="form-control" id="inputMes">
-              <option th:value="0">Selecione o Mês de Referência</option>
+            <select form="register" th:field="*{mes}" class="form-control" id="inputMes" required="required">
+              <option th:value>Selecione o Mês de Referência</option>
               <option th:value="1">Janeiro</option>
               <option th:value="2">Fevereiro</option>
               <option th:value="3">Março</option>
