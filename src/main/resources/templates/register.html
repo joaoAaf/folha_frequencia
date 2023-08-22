@@ -104,16 +104,16 @@
             <label th:for="saida2" class="form-label">Saída 2</label>
             <input type="time" th:field="*{horarios}" class="form-control" id="inputSaida2" required="required">
           </div>
-          <div class="col-12">
+          <div class="col-6">
             <div class="form-check">
               <input onclick="desativar(repetir, aleatorio)" class="form-check-input" type="checkbox"
                 th:field="*{repetir}" id="checkRepetir">
               <label class="form-check-label" th:for="repetir">
-                Repetir entrada e saída em todos os dias
+                Repetir entrada e saída
               </label>
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-6">
             <div class="form-check">
               <input onclick="desativar(aleatorio, repetir)" class="form-check-input" type="checkbox"
                 th:field="*{aleatorio}" id="checkAleatorio">
@@ -123,7 +123,15 @@
             </div>
           </div>
           <div class="col-12">
-            <button type="submit" class="btn btn-light">Gerar Frequência</button>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="checkSalvar">
+              <label class="form-check-label">
+                Salvar Dados
+              </label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button onclick="salvar()" type="submit" class="btn btn-light">Gerar Frequência</button>
           </div>
         </form>
       </div>
@@ -133,9 +141,11 @@
       <p>Criado por <a href="https://github.com/joaoAaf/gerador_frequencia" class="text-white">João Anderson</a></p>
     </footer>
   </div>
+  
   <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/currentYear.js"></script>
   <script src="js/disableCheck.js"></script>
+  <script src="js/saveData.js"></script>
 
 </body>
 
