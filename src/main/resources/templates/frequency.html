@@ -19,7 +19,6 @@
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="home">Inicio</a>
           <a class="nav-link fw-bold py-1 px-0 active" href="register">Frequência</a>
-          <a class="nav-link fw-bold py-1 px-0" href="#">Calendário</a>
         </nav>
       </div>
     </header>
@@ -109,12 +108,6 @@
             </tr>
           </thead>
           <tbody id="tboby_frequency" style="text-align:center">
-            <script th:inline="javascript">
-              const dia = /*[[${data.dia}]]*/[];
-              const repetir = /*[[${data.repetir}]]*/[];
-              const aleatorio = /*[[${data.aleatorio}]]*/[];
-              const json = /*[[${json}]]*/[];
-            </script>
           </tbody>
         </table>
         <br>
@@ -137,6 +130,12 @@
       <p>Criado por <a href="https://github.com/joaoAaf/gerador_frequencia" class="text-white">João Anderson</a></p>
     </footer>
   </div>
+  <script th:inline="javascript">
+    const dia = /*[[${data.dia}]]*/[];
+    const repetir = /*[[${data.repetir}]]*/[];
+    const aleatorio = /*[[${data.aleatorio}]]*/[];
+    const json = /*[[${json}]]*/[];
+  </script>
   <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/frequency.js"></script>
   <script src="js/createHTML.js"></script>
