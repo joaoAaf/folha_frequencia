@@ -1,20 +1,3 @@
-
-
-function salvar() {
-    let checkSalvar = document.getElementById('checkSalvar')
-
-    if (checkSalvar.checked) {
-        localStorage.setItem('data', JSON.stringify(dataDto))
-    }
-    console.log(localStorage.getItem('data'))
+if (json != null) {
+    localStorage.setItem('frequencyData', JSON.stringify(json))
 }
-
-
-
-
-
-
-
-/*localStorage.setItem('data', JSON.stringify(dataDto))
-
-const data = localStorage.getItem('data')*/

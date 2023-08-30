@@ -51,7 +51,7 @@
           </div>
           <div class="col-md-6">
             <label th:for="setor" class="form-label">Setor</label>
-            <input type="text" th:field="*{setor}" class="form-control" id="inputLotacao" required="required">
+            <input type="text" th:field="*{setor}" class="form-control" id="inputSetor" required="required">
           </div>
           <div class="col-md-6">
             <label th:for="chefia" class="form-label">Chefia Imediata</label>
@@ -122,16 +122,19 @@
               </label>
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-6">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="checkSalvar">
-              <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" th:field="*{salvar}" id="checkSalvar">
+              <label class="form-check-label" th:for="salvar">
                 Salvar Dados
               </label>
             </div>
           </div>
+          <div class="col-6">
+            <a onclick="limparDados()" href="register" type="button" class="btn btn-secondary btn-sm">Limpar Dados</a>
+          </div>
           <div class="col-12">
-            <button onclick="salvar()" type="submit" class="btn btn-light">Gerar Frequência</button>
+            <button type="submit" class="btn btn-light">Gerar Frequência</button>
           </div>
         </form>
       </div>
@@ -145,7 +148,7 @@
   <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/currentYear.js"></script>
   <script src="js/disableCheck.js"></script>
-  <script src="js/saveData.js"></script>
+  <script src="js/localData.js"></script>
 
 </body>
 

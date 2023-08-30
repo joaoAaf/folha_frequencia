@@ -6,7 +6,9 @@ import java.time.format.DateTimeFormatter;
 import org.springframework.stereotype.Service;
 
 import com.local.gerador_frequencia.model.dto.DataDTO;
+import com.local.gerador_frequencia.model.dto.DataJSON;
 import com.local.gerador_frequencia.model.entities.Data;
+
 
 @Service
 public class DataService {
@@ -24,6 +26,10 @@ public class DataService {
                 dataDto.getLotacao(), dataDto.getSetor(), dataDto.getChefia(), dataDto.getCargoChefia(),
                 dataDto.getJornada(), dataDto.getRepetir(), dataDto.getAleatorio(), dia);
         return data;
+    }
+
+    public DataJSON DTOForJson(DataDTO dataDto) {
+        return new DataJSON(dataDto);
     }
 
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.local.gerador_frequencia.model.dto.DataDTO;
+import com.local.gerador_frequencia.model.dto.DataJSON;
 import com.local.gerador_frequencia.model.entities.Data;
 import com.local.gerador_frequencia.model.service.DataService;
 
@@ -37,6 +38,11 @@ public class Pages {
     public String getFrequency (@ModelAttribute DataDTO dataDto, final Model model) {
         Data data = dataService.DTOForData(dataDto);
         model.addAttribute("data", data);
+        DataJSON json = null;
+        if (dataDto.getSalvar()) {
+            json = dataService.DTOForJson(dataDto);
+        }
+        model.addAttribute("json", json);
         return "frequency";
     }
 
